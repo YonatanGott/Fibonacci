@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Fibonacci Calculator</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row row-top">
+            <div class="col col-top">
+                <h1 class="display-1 head">Fibonacci Calculator</h1>
+            </div>
+        </div>
+        <div class="row row-calc">
+            <div class="col-auto col-calc">
+                <span class="align-bottom calc-text">The Fibonacci of </span>
+            </div>
+            <div class="col-auto col-input">
+                <input id="number" type="number" placeholder="#">
+            </div>
+            <div class="col-auto col-btn">
+                <button type="button" class="btn btn-primary">Is</button>
+            </div>
+            <div class="col-auto col-res">
+                <p id="result"></p>
+            </div>
+        </div>
+        <div class="row row-fib">
+            <div class="col-auto">
+                <button onclick="fibonacci()">Boop</button>
+                <script src="Caculator.js"></script>
+                <h3 id="fib"></h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
