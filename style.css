@@ -25,7 +25,15 @@ input {
     border: 1px solid #CCCCCC;
     border-radius: 4px;
 }
-
+.btn{
+    background: #0275D8;
+    border: 1px solid #0275D8;
+    border-radius: 4px;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+}
 .head {
     font-size: 72px;
     line-height: 79px;
