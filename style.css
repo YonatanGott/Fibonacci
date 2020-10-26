@@ -17,6 +17,7 @@ body {
 .col-top, .col-calc, .col-input, .col-btn, .col-res{
     padding: 0;
     margin-right: 14px;  
+    display: flex;
 }
 input {
     width: 86px;
@@ -33,6 +34,16 @@ input {
     font-size: 16px;
     text-align: center;
     color: #FFFFFF;
+}
+#result{
+    margin: 0;
+    align-self: center;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration-line: underline;
+    color: #373A3C;
 }
 .head {
     font-size: 72px;
