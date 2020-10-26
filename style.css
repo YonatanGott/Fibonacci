@@ -19,13 +19,23 @@ body {
     margin-right: 14px;  
     display: flex;
 }
+::placeholder {
+    font-size: 16px;
+    line-height: 38px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+}
 input {
     width: 86px;
     height: 38px;
     background: #FFFFFF;
     border: 1px solid #CCCCCC;
     border-radius: 4px;
+    font-size: 24px;
+    padding-left: 14px;
 }
+
 .btn{
     background: #0275D8;
     border: 1px solid #0275D8;
