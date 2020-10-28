@@ -8,9 +8,8 @@ function fibFetch(){
       return response.json();
     })
     .then(function(data) {
-      let fibjson = JSON.parse(data);
       let result = document.getElementById("result");
-      result.innerHTML = fibjson.result;
+      result.innerHTML = data.result;
     });
 }
 
