@@ -14,10 +14,16 @@ body {
     margin-top: 100px;
     margin-bottom: 50px;
 }
-.col-top, .col-calc, .col-input, .col-btn, .col-res{
+.col-top, .col-calc, .col-input, .col-btn, .col-res, .col-load{
     padding: 0;
     margin-right: 14px;  
     display: flex;
+}
+.col-valid{
+    padding: 0;
+}
+.row-invalid{
+    margin-top: 8px;
 }
 ::placeholder {
     font-size: 16px;
@@ -26,7 +32,7 @@ body {
     font-style: normal;
     font-weight: normal;
 }
-input {
+input, input:focus {
     width: 86px;
     height: 38px;
     background: #FFFFFF;
@@ -34,6 +40,13 @@ input {
     border-radius: 4px;
     font-size: 24px;
     padding-left: 14px;
+    outline-width: 0;
+}
+input:invalid{
+
+    border: 1px solid #D9534F;
+    color: #D9534F;
+
 }
 
 .btn{
@@ -70,4 +83,24 @@ input {
     margin: 0;
     display: flex;
     align-items: flex-end;
+}
+.invalid-feedback{
+    margin-left: 141px;
+    height: 33px;
+    width: 180px;
+    display: inline;
+    font-size: 16px;
+    line-height: 24px;
+    color: #A94442;
+    background: #F2DEDE;
+    border: 1px solid #EBCCCC;
+    border-radius: 4px;
+}
+#spinner{
+    visibility: hidden;
+    display: none;
+}
+#spinner.show{
+    visibility: visible;
+    display: inline;
 }

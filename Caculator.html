@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <title>Fibonacci Calculator</title>
@@ -23,14 +24,23 @@
                 <span class="calc-text">The Fibonacci of </span>
             </div>
             <div class="col-auto col-input">
-                <input id="number" type="number" placeholder="#">
+                <input class="needs-validation" id="number" type="number" placeholder="#" max="50">
+                
             </div>
             <div class="col-auto col-btn">
                 <button type="button" class="btn btn-primary" id="btn">Is</button>
                 <script src="server.js"></script>
             </div>
+            <div class="col-auto col-load">
+                <div class="spinner-border" id="spinner"></div>
+            </div>
             <div class="col-auto col-res">
                 <span id="result"></span>
+            </div>
+        </div>
+        <div class="row row-invalid">
+            <div class="col col-valid">
+                <div class="invalid-feedback">Can't be larger than 50</div>
             </div>
         </div>
        
