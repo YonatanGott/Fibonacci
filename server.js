@@ -1,3 +1,5 @@
+document.getElementById("btn").addEventListener("click", fetch());
+
 const fibserver =  'http://localhost:5050/fibonacci/7';
 
 fetch (fibserver)   
