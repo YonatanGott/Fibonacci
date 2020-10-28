@@ -8,10 +8,7 @@ function fibFetch(){
       return response.json();
     })
     .then(function(data) {
-      let result = document.getElementById("result");
-      result.innerHTML = data.result;
+      document.getElementById("result").innerHTML =  data.result;
     });
 }
-
 document.getElementById("btn").addEventListener('click', fibFetch);
-
