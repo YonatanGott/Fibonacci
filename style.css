@@ -17,6 +17,14 @@ body {
 .col-top, .col-calc, .col-input, .col-btn, .col-res{
     padding: 0;
     margin-right: 14px;  
+    display: flex;
+}
+::placeholder {
+    font-size: 16px;
+    line-height: 38px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
 }
 input {
     width: 86px;
@@ -24,7 +32,10 @@ input {
     background: #FFFFFF;
     border: 1px solid #CCCCCC;
     border-radius: 4px;
+    font-size: 24px;
+    padding-left: 14px;
 }
+
 .btn{
     background: #0275D8;
     border: 1px solid #0275D8;
@@ -33,6 +44,16 @@ input {
     font-size: 16px;
     text-align: center;
     color: #FFFFFF;
+}
+#result{
+    margin: 0;
+    align-self: center;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration-line: underline;
+    color: #373A3C;
 }
 .head {
     font-size: 72px;
