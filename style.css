@@ -84,11 +84,14 @@ input:invalid{
     display: flex;
     align-items: flex-end;
 }
-.invalid-feedback{
+.invalid-feedback2.show2{
+    display: none;
+}
+.invalid-feedback2{
+
     margin-left: 141px;
     height: 33px;
     width: 180px;
-    display: inline;
     font-size: 16px;
     line-height: 24px;
     color: #A94442;
