@@ -1,14 +1,16 @@
-
-function fibFetch(){
-  const fibserver =  'http://localhost:5050/fibonacci/';
+document.getElementById("btn").addEventListener('click', fibFetch);
+function fibFetch() {
+  const fibserver = 'http://localhost:5050/fibonacci/';
   let number = document.getElementById("number").value;
-  let numberserver = fibserver+number;
-  fetch (numberserver)   
-  .then(function(response) {
-      return response.json();
+  let numberserver = fibserver + number;
+  fetch(numberserver)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("result").innerHTML =  data.result; 
+      console.log(data);
     })
-    .then(function(data) {
-      document.getElementById("result").innerHTML =  data.result;
+    .catch(error => {
+      
+      console.log(error);
     });
 }
-document.getElementById("btn").addEventListener('click', fibFetch);
