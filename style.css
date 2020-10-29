@@ -84,12 +84,11 @@ input:invalid{
     display: flex;
     align-items: flex-end;
 }
-.invalid-feedback2.show2{
-    display: none;
+.invalid-feedback.show2{
+    display: flex;
 }
-.invalid-feedback2{
-
-    margin-left: 141px;
+.invalid-feedback{
+    margin-left: 103px;
     height: 33px;
     width: 180px;
     font-size: 16px;
@@ -98,6 +97,7 @@ input:invalid{
     background: #F2DEDE;
     border: 1px solid #EBCCCC;
     border-radius: 4px;
+    display: none;
 }
 #spinner{
     visibility: hidden;
