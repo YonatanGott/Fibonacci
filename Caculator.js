@@ -6,6 +6,5 @@ function fibonacci(){
         first = second;
         second = result;
     }
-
     document.getElementById("result").innerHTML = result;
 }

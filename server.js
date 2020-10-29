@@ -8,7 +8,6 @@ function showSpinner() {
   }, 600);
 }
 
-
 function fibFetch() {
   const fibserver = 'http://localhost:5050/fibonacci/';
   let number = document.getElementById("number").value;
