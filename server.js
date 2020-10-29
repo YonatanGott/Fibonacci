@@ -35,7 +35,8 @@ function fibFetch() {
       })
       .then(data => {
         if (typeof (data) === 'string') {
-          document.getElementById("result").innerHTML = data;
+          document.getElementById("server-error").classList.add('show3');
+          document.getElementById("server-error").innerHTML += data;
           console.log(data);
         }
         else {

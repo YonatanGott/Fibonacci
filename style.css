@@ -107,3 +107,15 @@ input:invalid{
     visibility: visible;
     display: inline;
 }
+#server-error{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    display: none;
+    align-items: center;
+    color: #D9534F;
+}
+#server-error.show3{
+    display: flex;
+}
