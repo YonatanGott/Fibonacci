@@ -9,7 +9,6 @@ body {
 .row{
     margin-left: 164px;
 }
-
 .row-top{
     margin-top: 100px;
     margin-bottom: 50px;
@@ -48,7 +47,6 @@ input:invalid{
     color: #D9534F;
 
 }
-
 .btn{
     background: #0275D8;
     border: 1px solid #0275D8;
