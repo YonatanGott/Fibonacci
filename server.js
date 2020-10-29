@@ -15,6 +15,8 @@ function fibFetch() {
   if (number > 50) {
     fifty.classList.add('show2');
     document.getElementById("result").innerHTML = "";
+    document.getElementById("server-error").innerHTML = "";
+    document.getElementById("server-error").classList.remove('show3');
     return;
   }
   else {
@@ -35,11 +37,14 @@ function fibFetch() {
       .then(data => {
         if (typeof (data) === 'string') {
           document.getElementById("server-error").classList.add('show3');
-          document.getElementById("server-error").innerHTML += data;
+          document.getElementById("result").innerHTML = "";
+          document.getElementById("server-error").innerHTML = "server error: " +data;
           console.log(data);
         }
         else {
           document.getElementById("result").innerHTML = data.result;
+          document.getElementById("server-error").innerHTML = "";
+
           console.log(data);
         }
       })
