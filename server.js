@@ -23,16 +23,28 @@ function fibFetch() {
     let numberserver = fibserver + number;
     showSpinner()
     fetch(numberserver)
-      .then(response => response.json())
+      .then(res => {
+        console.log(res);
+        if (res.status == 200) {
+
+          return res.json();
+        }
+        else {
+          return res.text();
+        }
+      })
       .then(data => {
-        document.getElementById("result").innerHTML = data.result;
-        console.log(data);
+        if (typeof (data) === 'string') {
+          document.getElementById("result").innerHTML = data;
+          console.log(data);
+        }
+        else {
+          document.getElementById("result").innerHTML = data.result;
+          console.log(data);
+        }
       })
       .catch(error => {
-        let boop = JSON.stringify(response);
-        console.log(boop);
-        console.log(error);
-        console.log(event);
+        console.error(error);
       });
   }
 }
