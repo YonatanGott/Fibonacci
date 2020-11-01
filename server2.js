@@ -6,6 +6,18 @@ function showSpinner() {
   setTimeout(function () { spinner.classList.remove('show') }, 600);
 }
 
+function predicateBy(prop){
+  return function(a,b){
+     if (a[prop] > b[prop]){
+         return 1;
+     } else if(a[prop] < b[prop]){
+         return -1;
+     }
+     return 0;
+  }
+}
+//Found on stackOverFlow 
+
 function listUpdate(){
 const fibserver = 'http://localhost:5050/getFibonacciResults';
 fetch(fibserver)
@@ -17,6 +29,7 @@ fetch(fibserver)
         console.log(data);
         let resArray = data.results;
         console.log(resArray);
+        resArray.sort( predicateBy("createdDate") );
         for (let i = 0; i < 3; i++){
             let lastRes = resArray[resArray.length - 1-i];
             console.log(lastRes);
@@ -27,11 +40,8 @@ fetch(fibserver)
             console.log(lastRes.createdDate);
             let num = lastRes.number;
             console.log(num);
-            let fibRes = document.createElement('li');
-            fibRes.innerHTML = `The fibonacci of <strong>${num}</strong> is <strong>${result}</strong>. Calculated at ${date}`;
-            let under = document.createElement('hr');
-            document.getElementById('resList').appendChild(fibRes);
-            document.getElementById('resList').appendChild(under);
+            let newRes =  document.querySelector('.list'+i);
+            newRes.innerHTML = `The fibonacci of <strong>${num}</strong> is <strong>${result}</strong>. Calculated at ${date}`;
         }
     })
     .catch(error => {
