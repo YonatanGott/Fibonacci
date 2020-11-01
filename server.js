@@ -4,6 +4,7 @@ function showSpinner() {
   let spinner = document.getElementById("spinner");
   spinner.classList.add('show');
   setTimeout(() => {
+    A
     spinner.classList.remove('show');
   }, 600);
 }
@@ -38,7 +39,7 @@ function fibFetch() {
         if (typeof (data) === 'string') {
           document.getElementById("server-error").classList.add('show3');
           document.getElementById("result").innerHTML = "";
-          document.getElementById("server-error").innerHTML = "server error: " +data;
+          document.getElementById("server-error").innerHTML = "server error: " + data;
           console.log(data);
         }
         else {
