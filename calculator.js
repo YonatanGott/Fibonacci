@@ -1,4 +1,4 @@
-function fibonacci(){
+function getFibonacci(){
     let num, result, first = 0, second = 1,i;
     num = document.getElementById("number").value;
     for ( i=2; i<=num; i++){

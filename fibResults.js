@@ -22,24 +22,16 @@ function listUpdate(){
 const fibserver = 'http://localhost:5050/getFibonacciResults';
 fetch(fibserver)
     .then(res => {
-        console.log(res);
         return res.json();
     })
     .then(data => {
-        console.log(data);
         let resArray = data.results;
-        console.log(resArray);
         resArray.sort( predicateBy("createdDate") );
         for (let i = 0; i < 3; i++){
             let lastRes = resArray[resArray.length - 1-i];
-            console.log(lastRes);
             let result = lastRes.result;
-            console.log(result);
             let date = Date(lastRes.createdDate);
-            console.log(date);
-            console.log(lastRes.createdDate);
             let num = lastRes.number;
-            console.log(num);
             let newRes =  document.querySelector('.list'+i);
             newRes.innerHTML = `The fibonacci of <strong>${num}</strong> is <strong>${result}</strong>. Calculated at ${date}`;
         }
@@ -66,7 +58,6 @@ function fibFetch() {
     showSpinner()
     fetch(numberserver)
       .then(res => {
-        console.log(res);
         if (res.status == 200) {
 
           return res.json();
@@ -80,13 +71,11 @@ function fibFetch() {
           document.getElementById("server-error").classList.add('show3');
           document.getElementById("result").innerHTML = "";
           document.getElementById("server-error").innerHTML = "server error: " + data;
-          console.log(data);
         }
         else {
           document.getElementById("result").innerHTML = data.result;
           document.getElementById("server-error").innerHTML = "";
           listUpdate();
-          console.log(data);
         }
       })
       .catch(error => {

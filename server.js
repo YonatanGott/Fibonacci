@@ -4,7 +4,6 @@ function showSpinner() {
   let spinner = document.getElementById("spinner");
   spinner.classList.add('show');
   setTimeout(() => {
-    A
     spinner.classList.remove('show');
   }, 600);
 }
@@ -18,6 +17,9 @@ function fibFetch() {
     document.getElementById("result").innerHTML = "";
     document.getElementById("server-error").innerHTML = "";
     document.getElementById("server-error").classList.remove('show3');
+    return;
+  }
+  else if (number < 0){
     return;
   }
   else {
