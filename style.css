@@ -94,7 +94,7 @@ input:invalid{
     display: flex;
 }
 .invalid-feedback{
-    margin-left: 103px;
+    margin-left: 22px;
     height: 33px;
     width: 180px;
     font-size: 16px;
@@ -136,4 +136,12 @@ hr{
     margin-top: 18px;
     margin-bottom: 24px;
     border-top: 1px solid #000000;
+}
+#checkbox{
+    width: 14px;
+    height: 14px;
+    border: 1px solid #CCCCCC;
+    margin-right: 6px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
 }

@@ -1,7 +1,7 @@
 
 const fibserver = 'http://localhost:5050/getFibonacciResults';
 
-function predicateBy(prop){
+function sortDate(prop){
     return function(a,b){
        if (a[prop] > b[prop]){
            return 1;
@@ -19,7 +19,7 @@ fetch(fibserver)
     })
     .then(data => {
         let resArray = data.results;
-        resArray.sort( predicateBy("createdDate") );
+        resArray.sort( sortDate("createdDate") );
         for (let i = 0; i < 3; i++){
             let lastRes = resArray[resArray.length - 1-i];
             let result = lastRes.result;
