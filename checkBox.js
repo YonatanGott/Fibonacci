@@ -5,6 +5,10 @@ function checkBox() {
     if (box.checked) {
         return fibFetch();
     } else {
+        document.getElementById("feedback").classList.remove('show2');
+        document.getElementById("result").innerHTML = "";
+        document.getElementById("server-error").innerHTML = "";
+        document.getElementById("server-error").classList.remove('show3');
         return getFibonacci();
     }
 }
@@ -60,7 +64,7 @@ function fibFetch() {
         document.getElementById("server-error").classList.remove('show3');
         return;
     }
-    else if(number < 0){
+    else if (number < 0) {
         document.getElementById("result").innerHTML = "";
         document.getElementById("server-error").innerHTML = "";
         document.getElementById("server-error").classList.remove('show3');
